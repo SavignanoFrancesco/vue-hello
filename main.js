@@ -12,13 +12,21 @@ var app = new Vue(
           imgStyle: 'imgStyle1'
       },
       methods: {
+            //funzione assegnata al bottone con evento @click
             changeImgDimension() {
+                //se l'immagine è presente
                 if(this.imgStyle == 'imgStyle1') {
-                    // se il colore attuale è rosso => lo imposto a blu
+                    //fai scomparire l'immagine cambiandogli classe
                     this.imgStyle = 'imgStyle2';
-                } else {
-                    // se il colore attuale è blu => lo imposto a rosso
+                    //cambia il testo del bottone
+                    this.buttonText = 'Fai scomparire l\'immagine';
+                }
+                //se l'immagine non è presente
+                else {
+                    //fai comparire l'immagine cambiandogli classe
                     this.imgStyle = 'imgStyle1';
+                    //cambia il testo del bottone
+                    this.buttonText = 'Fai comparire l\'immagine';
                 }
             }
         }
